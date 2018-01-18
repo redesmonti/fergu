@@ -74,7 +74,7 @@
 	</section>
 	<section class="texto-comercial">
 		<div class="container">
-		<div class="cuadro-blanco">
+		<div class="cuadro-blanco wow fadeInUp">
 			<h2><span>"</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia repellat impedit at magni saepe, tempora pariatur optio <span>"</span></h2>
 		</div>	
 		</div>

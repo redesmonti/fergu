@@ -1,0 +1,100 @@
+/*
+Theme Name: Fergu Theme
+Template Theme URI: http://monticomunicaciones.cl/
+Author: el equipo de afablestudio 
+Description: platilla creada para fergu  
+Version: 1.0 
+Tags: html5, css3
+*/
+
+
+/*--------------------------------------------------------------
+# Body
+--------------------------------------------------------------*/
+
+body{
+	background-color: #F3ECE9; 
+	padding-top: 70px;
+}
+
+
+/*--------------------------------------------------------------
+# Navegacion (navbar)
+--------------------------------------------------------------*/
+nav.navegacion {
+	top: 0;
+  	left: 0;
+  	right: 0;
+  	z-index: 10;
+  	background: #fff;
+}
+nav.navegacion ul{
+	margin-top: 12px;
+}
+nav.navegacion ul li{
+	/*para los dispositivos moviles*/
+	text-align: center;
+	margin-right: 10px;
+
+}
+nav.navegacion ul li a {
+	/* para los enlaces*/
+	color: #A7A09E;
+	padding: 13px;
+    padding-bottom: 3px;
+    border-bottom: 10px solid #fff;
+    transition: 0.3s ease;	
+}
+nav.navegacion ul li a:hover, nav.navegacion ul li a:active,  nav.navegacion ul li a:focus{
+	background: transparent;
+        border-bottom: 10px solid #E93E0B;
+    transition: 0.3s ease;
+}
+nav.navegacion ul li:hover, nav.navegacion ul li:active {
+
+}
+#navbarjs {
+    position: fixed;
+    box-shadow: 1px 1px 7px #00000045;
+}
+/*togglenavigation*/
+.navbar .navbar-header,
+.navbar-collapse {
+    float:none;
+    vertical-align: top;
+}
+
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 26px;
+  height: 4px;
+  background-color: #E93E0B;
+  border-radius: 1px;
+}
+
+/*codigo para ajustar logo en navbar*/
+.navbar-brand {
+	/*padding 8px ajusta bien para todos los dispositivos*/
+  	padding: 8px;
+}
+.navbar-brand> a img {
+	  height: 100%;
+	  padding: 1px;
+	  width: auto;
+}
+
+/* para dispositivos moviles*/
+@media (min-width: 780px){
+	
+	nav.navegacion ul li{
+		margin-left: auto;
+    	margin-right:auto;
+
+	}
+	nav.navegacion{
+		padding: 1px 0;
+		width: 100%;
+		position:absolute;
+		display: block;
+	}
+}

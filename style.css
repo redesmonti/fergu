@@ -13,8 +13,7 @@ Tags: html5, css3
 --------------------------------------------------------------*/
 
 body{
-	background-color: #F3ECE9; 
-	padding-top: 70px;
+	background-color: #ededed; 
 }
 
 
@@ -97,4 +96,178 @@ nav.navegacion ul li:hover, nav.navegacion ul li:active {
 		position:absolute;
 		display: block;
 	}
+}
+
+
+
+
+.carousel-caption {
+    right: 20%;
+    left: 20%;
+    padding-bottom: 189px;
+}
+.cuadro-titulo {
+    background: #ea4529;
+    width: 67%;
+    margin: auto;
+    padding: 3%;
+}
+.cuadro-titulo h1 {
+    text-shadow: none;
+    margin: 0px;
+}
+.cuadro-titulo h1:nth-child(1) {
+    font-size: 42px;
+}
+.cuadro-titulo h1:nth-child(2) {
+    font-size: 54px;
+}
+.carrusel-fotos-chicas .col-md-3{
+	padding: 0px;
+}
+
+
+
+/* carrusel chico */
+section.carrusel-chico {
+    width: 78%;
+    margin: auto;
+    margin-top: -70px;
+}
+.carrusel-fotos-chicas .item {
+    display: flex;
+    justify-content: center;
+}
+.carrusel-fotos-chicas .col-md-3 {
+    padding: 0px;
+    text-align: center;
+    width: 186px;
+}
+
+.carrusel-chico .carousel-control.right ,.carrusel-chico .carousel-control.left{
+    background: #fff;
+    background-image:none;
+    opacity: 1;
+}
+.carrusel-chico span.glyphicon.glyphicon-chevron-right, .carrusel-chico span.glyphicon.glyphicon-chevron-left {
+    text-shadow: none;
+    color: #ea4529;
+    font-size: 44px;
+}
+
+
+/* sección productos */
+.contendor-productos {
+    background: #fff;
+    padding: 2% 5%;
+    width: 78%;
+    margin: auto;
+    margin-top: 2%;
+}
+.contendor-productos h1 {
+    text-align: center;
+    font-size: 24px;
+}
+.contendor-productos h1 span {
+    background: #ea4529;
+    color: #fff;
+    padding: 4px;
+}
+.contendor-productos p {
+    color: #afafaf;
+    text-align: center;
+}
+.contendor-productos .fotos {
+    display: flex;
+    justify-content: space-between;
+    height: 310px;
+    margin-top: 3%;
+}
+.foto-contexto{
+	position: relative;
+}
+.texto-ambiente {
+    position: absolute;
+    top: 29%;
+    left: 16%;
+    color: #fff!important;
+    font-size: 30px;
+    font-weight: bold;
+    border: 2px solid #fff;
+    padding: 5%;
+}
+
+.foto-contexto img{
+	width: 100%;
+}
+.botones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.contenedor-boton1 {
+    position: relative;
+    overflow: hidden;
+    height: 134px;
+    margin-bottom: 18px;
+}
+.contenedor-boton1 a p {
+    position: absolute;
+    top: 109px;
+    z-index: 1;
+    left: 9px;
+    color: #fff;
+    font-weight: bold;
+}
+.cuadro-naranja {
+    background: #ea4529;
+    width: 124px;
+    height: 30px;
+    position: absolute;
+    top: 104px;
+    transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.contenedor-boton1 a:hover .cuadro-naranja {
+    width: 100%;
+    height: 200px;
+    top: 0px;
+    transition: 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+    opacity: 0.8;	
+}
+.cuadro-naranja2 {
+    background: #ea4529;
+    width: 147px;
+    height: 30px;
+    position: absolute;
+    top: 162px;
+        transition: 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.contenedor-boton1 a:hover .cuadro-naranja2 {
+    width: 100%;
+    height: 200px;
+    top: 0px;
+    transition: 0.6s cubic-bezier(0.65, 0.05, 0.36, 1);
+    opacity: 0.8;	
+}
+
+
+
+/*sección comercial */
+
+.texto-comercial {
+    background-image: url(http://localhost/fergu/wp-content/uploads/2018/01/fondo.png);
+    background-size: 100%;
+    background-attachment: fixed;
+    height: 300px;
+    margin-top: 2%;
+    padding-top: 8%;
+}
+.cuadro-blanco {
+    background: #ffffffc7;
+    width: 77%;
+    margin: auto;
+    text-align: center;
+    padding: 6px;
 }

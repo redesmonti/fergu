@@ -1,4 +1,11 @@
 <?php get_header(); ?>
+	<div class="social">
+		<ul>
+			<li><a href="http://www.facebook.com/falconmasters" target="_blank" class="icon-facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+			<li><a href="http://www.googleplus.com/falconmasters" target="_blank" class="icon-googleplus"><i class="fa fa-phone" aria-hidden="true"></i></a></li>
+			<li><a href="mailto:contacto@falconmasters.com" class="icon-mail"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+		</ul>
+	</div>
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">

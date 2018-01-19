@@ -6,23 +6,23 @@
 			<p class="wow zoomIn">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa mollitia a neque labore</p>
 		</div>
 		</div>
-		<div class="col-md-7">
-			<div class="col-md-6">
+		<div class="col-md-7 col-sm-12">
+			<div class="col-md-6 col-sm-6 col-xs-12">
 				<div class="contenedor-boton1  wow fadeInUp">
 				<a href=""><p>Cortinas Roller</p><div class="cuadro-naranja"></div><img src="<?php echo get_template_directory_uri(); ?>/assets/tipo1.png" alt=""></a>	
 				</div>
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-6 col-sm-6 col-xs-12">
 				<div class="contenedor-boton1  wow fadeInUp">
 				<a href=""><p>Cortinas Roller</p><div class="cuadro-naranja"></div><img src="<?php echo get_template_directory_uri(); ?>/assets/tipo1.png" alt=""></a>	
 				</div>
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-6 col-sm-6 col-xs-12">
 				<div class="contenedor-boton1  wow fadeInUp">
 				<a href=""><p>Cortinas Roller</p><div class="cuadro-naranja"></div><img src="<?php echo get_template_directory_uri(); ?>/assets/tipo1.png" alt=""></a>	
 				</div>
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-6 col-sm-6 col-xs-12">
 				<div class="contenedor-boton1  wow fadeInUp">
 				<a href=""><p>Cortinas Roller</p><div class="cuadro-naranja"></div><img src="<?php echo get_template_directory_uri(); ?>/assets/tipo1.png" alt=""></a>	
 				</div>

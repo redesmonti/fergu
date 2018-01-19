@@ -76,9 +76,46 @@
 
 
 	<!-- productos  -->
-	<section id="productos" class="smooth-scroll">
-		<?php include_once( 'productos.php' ); ?>	
-	</section>
+<section class="productos">
+	<div class="contendor-productos container">
+		<div class="row">
+			<div class="col-md-12">
+			<h1 class="wow zoomIn">Nuestros <span>Productos</span></h1>
+			<p class="wow zoomIn">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa mollitia a neque labore</p>
+		</div>
+		</div>
+		
+		<div class="col-md-5">
+			<div class="foto-contexto wow fadeInUp">
+				<p class="texto-ambiente">Texto prueba</p>
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/ambiente.png" alt="">	
+			</div>
+		</div>
+		<div class="col-md-7 col-sm-12">
+			<div class="col-md-6 col-sm-6 col-xs-12">
+				<div class="contenedor-boton1  wow fadeInUp">
+				<a href=""><p>Cortinas Roller</p><div class="cuadro-naranja"></div><img src="<?php echo get_template_directory_uri(); ?>/assets/tipo1.png" alt=""></a>	
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-12">
+				<div class="contenedor-boton1  wow fadeInUp">
+				<a href=""><p>Cortinas Roller</p><div class="cuadro-naranja"></div><img src="<?php echo get_template_directory_uri(); ?>/assets/tipo1.png" alt=""></a>	
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-12">
+				<div class="contenedor-boton1  wow fadeInUp">
+				<a href=""><p>Cortinas Roller</p><div class="cuadro-naranja"></div><img src="<?php echo get_template_directory_uri(); ?>/assets/tipo1.png" alt=""></a>	
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-12">
+				<div class="contenedor-boton1  wow fadeInUp">
+				<a href=""><p>Cortinas Roller</p><div class="cuadro-naranja"></div><img src="<?php echo get_template_directory_uri(); ?>/assets/tipo1.png" alt=""></a>	
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
 	<section class="texto-comercial">
 		<div class="container">
 		<div class="cuadro-blanco wow fadeInUp">
@@ -87,9 +124,84 @@
 		</div>
 	</section>
 	<!-- servicios  -->
-	<section id="servicios" class="smooth-scroll">
-		<?php include_once( 'servicios.php' ); ?>	
-	</section>
+<section class="servicios">
+	<div class="contendor-productos container">
+		<div class="row">
+			<div class="col-md-12">
+			<h1 class="wow zoomIn">Nuestros <span>Servicios</span></h1>
+			<p class="wow zoomIn">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa mollitia a neque labore</p>
+		</div>
+		</div>
+		<div class="col-md-7 col-sm-12">
+			<div class="col-md-6 col-sm-6 col-xs-12">
+				<div class="contenedor-boton1  wow fadeInUp">
+				<a href=""><p>Cortinas Roller</p><div class="cuadro-naranja"></div><img src="<?php echo get_template_directory_uri(); ?>/assets/tipo1.png" alt=""></a>	
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-12">
+				<div class="contenedor-boton1  wow fadeInUp">
+				<a href=""><p>Cortinas Roller</p><div class="cuadro-naranja"></div><img src="<?php echo get_template_directory_uri(); ?>/assets/tipo1.png" alt=""></a>	
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-12">
+				<div class="contenedor-boton1  wow fadeInUp">
+				<a href=""><p>Cortinas Roller</p><div class="cuadro-naranja"></div><img src="<?php echo get_template_directory_uri(); ?>/assets/tipo1.png" alt=""></a>	
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-12">
+				<div class="contenedor-boton1  wow fadeInUp">
+				<a href=""><p>Cortinas Roller</p><div class="cuadro-naranja"></div><img src="<?php echo get_template_directory_uri(); ?>/assets/tipo1.png" alt=""></a>	
+				</div>
+			</div>
+		</div>		
+		<div class="col-md-5">
+			<div class="foto-contexto wow fadeInUp">
+				<p class="texto-ambiente">Texto prueba</p>
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/ambiente.png" alt="">	
+			</div>
+		</div>
+
+	</div>
+</section>
+<section class="servicios2">
+	<div class="contendor-productos container">
+		<div class="row">
+			<div class="col-md-12">
+			<h1 class="wow zoomIn">Nuestros <span>Servicios</span></h1>
+			<p class="wow zoomIn">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa mollitia a neque labore</p>
+		</div>
+		</div>
+		
+		<div class="col-md-5">
+			<div class="foto-contexto wow fadeInUp">
+				<p class="texto-ambiente">Texto prueba</p>
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/ambiente.png" alt="">	
+			</div>
+		</div>
+		<div class="col-md-7 col-sm-12">
+			<div class="col-md-6 col-sm-6 col-xs-12">
+				<div class="contenedor-boton1  wow fadeInUp">
+				<a href=""><p>Cortinas Roller</p><div class="cuadro-naranja"></div><img src="<?php echo get_template_directory_uri(); ?>/assets/tipo1.png" alt=""></a>	
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-12">
+				<div class="contenedor-boton1  wow fadeInUp">
+				<a href=""><p>Cortinas Roller</p><div class="cuadro-naranja"></div><img src="<?php echo get_template_directory_uri(); ?>/assets/tipo1.png" alt=""></a>	
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-12">
+				<div class="contenedor-boton1  wow fadeInUp">
+				<a href=""><p>Cortinas Roller</p><div class="cuadro-naranja"></div><img src="<?php echo get_template_directory_uri(); ?>/assets/tipo1.png" alt=""></a>	
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-12">
+				<div class="contenedor-boton1  wow fadeInUp">
+				<a href=""><p>Cortinas Roller</p><div class="cuadro-naranja"></div><img src="<?php echo get_template_directory_uri(); ?>/assets/tipo1.png" alt=""></a>	
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
 	<!-- contacto  -->
 	<section id="contacto" class="smooth-scroll">

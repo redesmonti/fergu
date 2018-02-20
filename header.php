@@ -14,7 +14,7 @@
 	        <div class="container">
 	          <div class="navbar-header"> 
 	            <div class="navbar-brand">
-	              <a href="http://localhost/fergu/">
+	              <a href="<?php bloginfo('url'); ?>">
 	              	<img src="<?php echo get_template_directory_uri(); ?>/assets/logo.jpg" alt="">
 	              </a>  
 	            </div> 
@@ -38,3 +38,11 @@
 	        </div>        
 	    </nav><!-- fin navegacion-->
 	</header>
+	<div class="social">
+		<ul>
+			<li><a href="https://www.facebook.com/cortinasfergu" target="_blank" class="icon-facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+			<li><a href="tel:+56997101403" target="_blank" class="icon-googleplus"><i class="fa fa-phone" aria-hidden="true"></i></a></li>
+			<li><a href="https://api.whatsapp.com/send?phone=+56993113958" class="icon-whatsapp"target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+			<li><a href="mailto:lgutierrez@cortinasfergu.cl" class="icon-mail"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+		</ul>
+	</div>

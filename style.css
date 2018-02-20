@@ -122,9 +122,6 @@ nav.navegacion ul li:hover, nav.navegacion ul li:active {
 .cuadro-titulo h1:nth-child(2) {
     font-size: 54px;
 }
-.carrusel-fotos-chicas .col-md-3{
-	padding: 0px;
-}
 
 
 
@@ -134,15 +131,17 @@ section.carrusel-chico {
     margin: auto;
     margin-top: -70px;
 }
+
+
+.carrusel-fotos-chicas .col-lg-3 .col-xs-3 .col-md-3 .col-sm-3{
+    padding: 0px;
+}
 .carrusel-fotos-chicas .item {
-    display: flex;
+    
+    padding: 0px;
     justify-content: center;
 }
-.carrusel-fotos-chicas .col-md-3 {
-    padding: 0px;
-    text-align: center;
-    width: 186px;
-}
+
 
 .carrusel-chico .carousel-control.right ,.carrusel-chico .carousel-control.left{
     background: #fff;
@@ -221,7 +220,16 @@ section.carrusel-chico {
 }
 .cuadro-naranja {
     background: #ea4529;
-    width: 124px;
+    width: 170px;
+    height: 30px;
+    position: absolute;
+    top: 104px;
+    transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.cuadro-naranja3 {
+    background: #ea4529;
+    width: 220px;
     height: 30px;
     position: absolute;
     top: 104px;
@@ -235,6 +243,15 @@ section.carrusel-chico {
     transition: 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
     opacity: 0.9;	
 }
+
+.contenedor-boton1 a:hover .cuadro-naranja3 {
+    width:100%;
+    height: 600px;
+    top: 0px;
+    transition: 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+    opacity: 0.9;   
+}
+
 .cuadro-naranja2 {
     background: #ea4529;
     width: 147px;
@@ -259,7 +276,7 @@ section.carrusel-chico {
 /*sección comercial */
 
 .texto-comercial {
-    background-image: url(http://localhost/fergu/wp-content/uploads/2018/01/fondo.png);
+    background-image: url(http://pruebabrother.96.lt/fergu/wp-content/uploads/2018/01/fondo.png);
     background-size: 100%;
     background-attachment: fixed;
     height: 300px;
@@ -278,7 +295,7 @@ section.carrusel-chico {
 /*sección mapa   */
 .contenedor-mapa{
     padding: 5%;
-    background-image: url(http://localhost/fergu/wp-content/uploads/2018/01/fondo-contacto.png);
+    background-image: url(http://pruebabrother.96.lt/fergu/wp-content/uploads/2018/01/fondo-contacto.png);
     background-attachment: fixed;
     background-size: 100%;
 }
@@ -310,7 +327,7 @@ section#contacto {
 .social {
     position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
     left: 0; /* Establecemos la barra en la izquierda */
-    top: 200px; /* Bajamos la barra 200px de arriba a abajo */
+    top: 80px; /* Bajamos la barra 200px de arriba a abajo */
     z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
 }
  
@@ -323,8 +340,8 @@ section#contacto {
         display: inline-block;
         color:#fff;
         background: #000;
-        width: 40px;
-    padding: 12px;
+        width: 52px;
+        padding: 17px;
         text-decoration: none;
         -webkit-transition:all 500ms ease;
         -o-transition:all 500ms ease;
@@ -332,15 +349,20 @@ section#contacto {
     }
  
     .social ul li .icon-facebook {background:#ea4529;} /* Establecemos los colores de cada red social, aprovechando su class */
-    .social ul li .icon-twitter {background: #00abf0;}
-    .social ul li .icon-googleplus {background: #b53620;}
+    .social ul li .icon-googleplus {background: #e33416;}/*telefono*/
+    .social ul li .icon-whatsapp {background: #cc2f14;}
     .social ul li .icon-pinterest {background: #ae181f;}
-    .social ul li .icon-mail {background: #942d1c;}
+    .social ul li .icon-mail {background: #b52912;}
  
     .social ul li a:hover {
         width: 88px;
-    padding-left: 41%; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+        padding-left: 41%; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
     }
+
+    .fa {
+        font-size: 20px;
+    }
+
 .servicios2{
     display: none;
 }
@@ -358,10 +380,10 @@ section#contacto {
 }
 @media (max-width: 780px){
     .servicios{
-        display: none;
+        display: block;
     }
     .servicios2{
-        display: block;
+        display: none;
     }
     .contenedor-boton1 a p {
     top: 95px;
@@ -391,4 +413,219 @@ section#contacto {
 .texto-comercial {
     height: 386px;
 }
+}
+
+
+.contenedor-entradas{
+    margin-top: 160px;
+}
+
+
+/*
+Fade content bs-carousel with hero headers
+Code snippet by maridlcrmn (Follow me on Twitter @maridlcrmn) for Bootsnipp.com
+Image credits: unsplash.com
+*/
+
+/********************************/
+/*       Fade Bs-carousel       */
+/********************************/
+.fade-carousel {
+    position: relative;
+    height: 100vh;
+}
+.fade-carousel .carousel-inner .item {
+    height: 100vh;
+}
+.fade-carousel .carousel-indicators > li {
+    margin: 0 2px;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    opacity: .7;
+}
+.fade-carousel .carousel-indicators > li.active {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+}
+
+/********************************/
+/*          Hero Headers        */
+/********************************/
+.hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+        text-shadow: none;
+      -webkit-transform: translate3d(-50%,-50%,0);
+         -moz-transform: translate3d(-50%,-50%,0);
+          -ms-transform: translate3d(-50%,-50%,0);
+           -o-transform: translate3d(-50%,-50%,0);
+              transform: translate3d(-50%,-50%,0);
+}
+.hero h1 {
+    font-size: 5em;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-shadow: none;
+}
+
+.hero h2{
+    font-weight:bold;
+}
+
+.fade-carousel .carousel-inner .item .hero {
+    opacity: 0;
+    -webkit-transition: 0.8s all ease-in-out .1s;
+       -moz-transition: 0.8s all ease-in-out .1s; 
+        -ms-transition: 0.8s all ease-in-out .1s; 
+         -o-transition: 0.8s all ease-in-out .1s; 
+            transition: 0.8s all ease-in-out .1s; 
+}
+.fade-carousel .carousel-inner .item.active .hero {
+    opacity: 1;
+    -webkit-transition: 0.8s all ease-in-out .1s;
+       -moz-transition: 0.8s all ease-in-out .1s; 
+        -ms-transition: 0.8s all ease-in-out .1s; 
+         -o-transition: 0.8s all ease-in-out .1s; 
+            transition: 0.8s all ease-in-out .1s;    
+}
+
+
+
+/********************************/
+/*       Slides backgrounds     */
+/********************************/
+.fade-carousel .slides .slide-1, 
+.fade-carousel .slides .slide-2,
+.fade-carousel .slides .slide-3 {
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.fade-carousel .slides .slide-1 {
+  background-image: url(http://localhost/fergu/wp-content/uploads/2018/02/slider1.png); 
+}
+.fade-carousel .slides .slide-2 {
+  background-image: url(http://localhost/fergu/wp-content/uploads/2018/02/slider1.png);
+}
+.fade-carousel .slides .slide-3 {
+  background-image: url(http://localhost/fergu/wp-content/uploads/2018/02/slider1.png);
+}
+
+
+/********************************/
+/*          Media Queries       */
+/********************************/
+@media screen and (min-width: 980px){
+    .hero { width: 980px; }    
+}
+@media screen and (max-width: 640px){
+    .hero h1 { font-size: 4em; }    
+}
+
+/*
+
+-----------------------------> S L I D E R / G A L E R I A <--------------------------
+
+*/
+
+
+#custom_carousel .item  .top {
+    overflow:hidden;
+    max-height:300px;
+    margin-bottom:15px;
+}
+#custom_carousel .item {
+
+    color:#000;
+    background-color:#fff;
+    padding:20px 0;
+    overflow:hidden
+}
+#custom_carousel .item img{
+width:100%;
+height:auto
+}
+
+#custom_carousel .izq 
+{
+    position:absolute;
+  left: -25px;
+  top:40%;
+  background-image: none;
+  background: none repeat scroll 0 0 #222222;
+  border: 4px solid #FFFFFF;
+  border-radius: 23px;
+  height: 40px;
+  width : 40px;
+  margin-top: 30px;
+}
+/* Next button  */
+#custom_carousel .der 
+{
+       position:absolute;
+  right: -25px !important;
+  top:40%;
+  left:inherit;
+  background-image: none;
+  background: none repeat scroll 0 0 #222222;
+  border: 4px solid #FFFFFF;
+  border-radius: 23px;
+  height: 40px;
+  width : 40px;
+  margin-top: 30px;
+}
+#custom_carousel .controls{
+
+    overflow:hidden;
+    padding:0;
+    margin:0;
+    white-space: nowrap;
+    text-align: center;
+    position: relative;
+    background:#fff;
+    border:0;
+}
+#custom_carousel .controls .nav{
+
+    padding:0;
+    margin:0;
+    white-space: nowrap;
+    text-align: center;
+    position: relative;
+    background:#fff;
+    width: auto;
+    border: 0;
+}
+#custom_carousel .controls li {
+    transition: all .5s ease;
+    display: inline-block;
+    max-width: 100px;
+    height: 90px;
+    opacity:.5;
+}
+#custom_carousel .controls li a{
+    padding:0;
+}
+#custom_carousel .controls li img{
+width:100%;
+height:auto
+}
+
+#custom_carousel .controls li.active {
+    background-color:#fff;
+    opacity:1;
+}
+#custom_carousel .controls a small {
+    overflow:hidden;
+    display:block;
+    font-size:10px;
+    margin-top:5px;
+    font-weight:bold
 }

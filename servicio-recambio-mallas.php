@@ -68,7 +68,8 @@ Template Name: servicio recambio de mallas
                         <li data-target="#custom_carousel" data-slide-to="<?php echo $the_query->current_post; ?>" class="<?php if( $the_query->current_post == 0 ):?>active<?php endif; ?>">
                         	<div class="imagen">
 		                      <?php  if ( has_post_thumbnail() ) { the_post_thumbnail('medium', array('class' => 'img-responsive')); }?>
-		                    </div><small><?php the_title(); ?></small></a></li>
+		                    </div>
+		                </li>
                 	</ul>
                 </div>
                 <?php endwhile; endif; ?>
@@ -81,7 +82,7 @@ Template Name: servicio recambio de mallas
 			<h2>Solicitud de Información</h2>
 			
 
-    	<form id="contact-form" name="contact-form" action="<?php echo ('http://testmonti.sedadent.cl/');?>#contact-form" method="post">
+    	<form id="contact-form" name="contact-form" action="<?php bloginfo('url'); ?>/#contact-form" method="post">
 		              <?php //Comprobamos si el formulario ha sido enviado
 		              if (isset( $_POST['btn-submit'] )) {
 		                //Creamos una variable para almacenar los errores

@@ -68,7 +68,8 @@ Template Name: servicio cortinas madera
                         <li data-target="#custom_carousel" data-slide-to="<?php echo $the_query->current_post; ?>" class="<?php if( $the_query->current_post == 0 ):?>active<?php endif; ?>">
                         	<div class="imagen">
 		                      <?php  if ( has_post_thumbnail() ) { the_post_thumbnail('medium', array('class' => 'img-responsive')); }?>
-		                    </div><small><?php the_title(); ?></small></a></li>
+		                    </div>
+		                </li>
                 	</ul>
                 </div>
                 <?php endwhile; endif; ?>
@@ -81,7 +82,7 @@ Template Name: servicio cortinas madera
 			<h2>Solicitud de Información</h2>
 			
 
-    	<form id="contact-form" name="contact-form" action="<?php echo ('http://testmonti.sedadent.cl/');?>#contact-form" method="post">
+    	<form id="contact-form" name="contact-form" action="<?php bloginfo('url'); ?>/#contact-form" method="post">
 		              <?php //Comprobamos si el formulario ha sido enviado
 		              if (isset( $_POST['btn-submit'] )) {
 		                //Creamos una variable para almacenar los errores
@@ -102,16 +103,16 @@ Template Name: servicio cortinas madera
 		                if ( empty( $f_name ) ) {
 		                  $reg_errors->add("empty-name", "El campo nombre es obligatorio");
 		                }
-		                //El campo Email es obligatorio, comprobamos que no esté vacío y en caso contrario creamos un registro de error
-		                if ( empty( $f_email ) ) {
-		                  $reg_errors->add("empty-email", "El campo e-mail es obligatorio");
+		                //El campo Email o Telefono es obligatorio, comprobamos que no esté vacío y en caso contrario creamos un registro de error
+		                if ( empty( $f_email ) or  empty( $telefono ) ) {
+		                  $reg_errors->add("empty-email-or-phone", "El campo e-mail o telefono es obligatorio");
 		                }
 		                //Comprobamos que el dato tenga formato de e-mail con la función de WordPress "is_email" y en caso contrario creamos un registro de error
 		                if ( !is_email( $f_email ) ) {
 		                  $reg_errors->add( "invalid-email", "El e-mail no tiene un formato válido" );
 		                }
 		                //El campo Teléfono es obligatorio, comprobamos que no esté vacío y en caso contrario creamos un registro de error
-		                if ( empty( $telefono ) ) {
+		                /*if ( empty( $telefono ) ) {
 		                  $reg_errors->add("empty-telefono", "El campo teléfono es obligatorio");
 		                }
 		                //El campo Dirección es obligatorio, comprobamos que no esté vacío y en caso contrario creamos un registro de error
@@ -125,7 +126,7 @@ Template Name: servicio cortinas madera
 		                //El campo Ciudad es obligatorio, comprobamos que no esté vacío y en caso contrario creamos un registro de error
 		                if ( empty( $ciudad ) ) {
 		                  $reg_errors->add("empty-ciudad", "El campo ciudad es obligatorio");
-		                }
+		                }*/
 		                //El campo Mensaje es obligatorio, comprobamos que no esté vacío y en caso contrario creamos un registro de error
 		                if ( empty( $f_message ) ) {
 		                  $reg_errors->add("empty-message", "El campo mensaje es obligatorio");
@@ -219,11 +220,11 @@ Template Name: servicio cortinas madera
 		 
 		                <?php //Comprobamos si hay errores en la validación del campo E-mail
 		                if ( is_wp_error( $reg_errors ) ) {
-		                  if ($reg_errors->get_error_message("empty-email")) {?>
+		                  if ($reg_errors->get_error_message("empty-email-or-phone")) {?>
 		                  <br class="clearfix" />
 		                  <div class="alert alert-danger alert-dismissable">
 		                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-		                    <p><?php echo $reg_errors->get_error_message("empty-email");?></p>
+		                    <p><?php echo $reg_errors->get_error_message("empty-email-or-phone");?></p>
 		                  </div>
 		                  <?php }
 		                }
@@ -245,18 +246,18 @@ Template Name: servicio cortinas madera
 		 
 		                <?php //Comprobamos si hay errores en la validación del campo Clinica
 		                if ( is_wp_error( $reg_errors ) ) {
-		                  if ($reg_errors->get_error_message("empty-telefono")) {?>
+		                  if ($reg_errors->get_error_message("empty-email-or-phone")) {?>
 		                  <br class="clearfix" />
 		                  <div class="alert alert-danger alert-dismissable">
 		                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-		                    <p><?php echo $reg_errors->get_error_message("empty-telefono");?></p>
+		                    <p><?php echo $reg_errors->get_error_message("empty-email-or-phone");?></p>
 		                  </div>
 		                  <?php }
 		                }?>
 		              </div>
 		 
 		              <div class="form-group">
-		                <input type="text" id="direccion" name="direccion" class="form-control" value="<?php echo $direccion;?>" placeholder="Dirección" required aria-required="true">
+		                <input type="text" id="direccion" name="direccion" class="form-control" value="<?php echo $direccion;?>" placeholder="Dirección" aria-required="true">
 		 
 		                <?php //Comprobamos si hay errores en la validación del campo Clinica
 		                if ( is_wp_error( $reg_errors ) ) {
@@ -271,7 +272,7 @@ Template Name: servicio cortinas madera
 		              </div>
 
 		              <div class="form-group">
-		                <input type="text" id="comuna" name="comuna" class="form-control" value="<?php echo $comuna;?>" placeholder="Comuna" required aria-required="true">
+		                <input type="text" id="comuna" name="comuna" class="form-control" value="<?php echo $comuna;?>" placeholder="Comuna" aria-required="true">
 		 
 		                <?php //Comprobamos si hay errores en la validación del campo Clinica
 		                if ( is_wp_error( $reg_errors ) ) {
@@ -286,7 +287,7 @@ Template Name: servicio cortinas madera
 		              </div>
 
 		              <div class="form-group">
-		                <input type="text" id="ciudad" name="ciudad" class="form-control" value="<?php echo $ciudad;?>" placeholder="Ciudad" required aria-required="true">
+		                <input type="text" id="ciudad" name="ciudad" class="form-control" value="<?php echo $ciudad;?>" placeholder="Ciudad" aria-required="true">
 		 
 		                <?php //Comprobamos si hay errores en la validación del campo Clinica
 		                if ( is_wp_error( $reg_errors ) ) {

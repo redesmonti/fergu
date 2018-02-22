@@ -16,7 +16,7 @@ Template Name: Cortinas madera
 		        $original_query = $wp_query;
 		        $args = array(
 		            'post_type' => 'cortina',
-		            'showposts' => '4', //numero de noticias que treara
+		            'showposts' => '6', //numero de noticias que treara
 		            'paged' => $currentPage ,
 		            'orderby' => 'date', 
 		            'order' => 'DESC', 
@@ -63,12 +63,13 @@ Template Name: Cortinas madera
             <!-- End Carousel Inner -->
             <div class="controls">
             	<?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-                <div class="col-lg-3 col-xs-3 col-md-3 col-sm-3 ">
+                <div class="col-lg-2 col-xs-2 col-md-2 col-sm-2 ">
                 	<ul class="nav">
                         <li data-target="#custom_carousel" data-slide-to="<?php echo $the_query->current_post; ?>" class="<?php if( $the_query->current_post == 0 ):?>active<?php endif; ?>">
                         	<div class="imagen">
 		                      <?php  if ( has_post_thumbnail() ) { the_post_thumbnail('medium', array('class' => 'img-responsive')); }?>
-		                    </div><small><?php the_title(); ?></small></a></li>
+		                    </div>
+		                </li>
                 	</ul>
                 </div>
                 <?php endwhile; endif; ?>
@@ -81,7 +82,7 @@ Template Name: Cortinas madera
 			<h2>Solicitud de Información</h2>
 			
 
-    	<form id="contact-form" name="contact-form" action="<?php echo ('http://testmonti.sedadent.cl/');?>#contact-form" method="post">
+    	<form id="contact-form" name="contact-form" action="<?php bloginfo('url'); ?>/#contact-form" method="post">
 		              <?php //Comprobamos si el formulario ha sido enviado
 		              if (isset( $_POST['btn-submit'] )) {
 		                //Creamos una variable para almacenar los errores

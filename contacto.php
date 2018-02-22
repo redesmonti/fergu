@@ -5,7 +5,7 @@
 			<span>Dirección:</span>
 			<p>Américo Vespucio #475, La Cisterna</p>
 			<span>Teléfono</span>
-			<p>25586451</p>
+			<p>225586451</p>
 			<span>Celular</span>
 			<p>(09)-97101403</p>
 		</div>

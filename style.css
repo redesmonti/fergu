@@ -108,7 +108,7 @@ nav.navegacion ul li:hover, nav.navegacion ul li:active {
 }
 .cuadro-titulo {
     background: #ea4529;
-    width: 67%;
+    /*width: 67%;*/
     margin: auto;
     padding: 3%;
 }
@@ -509,13 +509,13 @@ Image credits: unsplash.com
   background-repeat: no-repeat;
 }
 .fade-carousel .slides .slide-1 {
-  background-image: url(http://localhost/fergu/wp-content/uploads/2018/02/slider1.png); 
+  background-image: url(http://192.168.100.10/fergu/wp-content/uploads/2018/02/IMG_0925.jpg); 
 }
 .fade-carousel .slides .slide-2 {
-  background-image: url(http://localhost/fergu/wp-content/uploads/2018/02/slider1.png);
+  background-image: url(http://192.168.100.10/fergu/wp-content/uploads/2018/02/IMG_0911.jpg);
 }
 .fade-carousel .slides .slide-3 {
-  background-image: url(http://localhost/fergu/wp-content/uploads/2018/02/slider1.png);
+  background-image: url(http://192.168.100.10/fergu/wp-content/uploads/2018/02/slider1.png);
 }
 
 
@@ -523,7 +523,7 @@ Image credits: unsplash.com
 /*          Media Queries       */
 /********************************/
 @media screen and (min-width: 980px){
-    .hero { width: 980px; }    
+    /*.hero { width: 980px; }*/
 }
 @media screen and (max-width: 640px){
     .hero h1 { font-size: 4em; }    

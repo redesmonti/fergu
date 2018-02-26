@@ -46,11 +46,11 @@ nav.navegacion ul li a {
 }
 nav.navegacion ul li a:hover, nav.navegacion ul li a:active,  nav.navegacion ul li a:focus{
 	background: transparent;
-        border-bottom: 10px solid #E93E0B;
+    border-bottom: 10px solid #E93E0B;
     transition: 0.3s ease;
 }
 nav.navegacion ul li:hover, nav.navegacion ul li:active {
-
+    
 }
 #navbarjs {
     position: fixed;

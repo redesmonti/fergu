@@ -83,16 +83,16 @@
 	    </div>
 	    <div class="item">
 		    <div class="col-lg-3 col-xs-3 col-md-3 col-sm-3">
-		    	<img src="<?php echo get_template_directory_uri(); ?>/assets/logo.jpg" alt="...">	
+		    	<img src="<?php echo get_template_directory_uri(); ?>/assets/FB_IMG_1519313042368.jpg" alt="...">	
 		    </div>
 		    <div class="col-lg-3 col-xs-3 col-md-3 col-sm-3">
-		    	<img src="<?php echo get_template_directory_uri(); ?>/assets/logo.jpg" alt="...">	
+		    	<img src="<?php echo get_template_directory_uri(); ?>/assets/FB_IMG_1519313042368.jpg" alt="...">	
 		    </div>
 		    <div class="col-lg-3 col-xs-3 col-md-3 col-sm-3">
-		    	<img src="<?php echo get_template_directory_uri(); ?>/assets/logo.jpg" alt="...">	
+		    	<img src="<?php echo get_template_directory_uri(); ?>/assets/FB_IMG_1519313042368.jpg" alt="...">	
 		    </div>
 		    <div class="col-lg-3 col-xs-3 col-md-3 col-sm-3">
-		    	<img src="<?php echo get_template_directory_uri(); ?>/assets/logo.jpg" alt="...">	
+		    	<img src="<?php echo get_template_directory_uri(); ?>/assets/FB_IMG_1519313042368.jpg" alt="...">	
 		    </div>
 	    </div>
 	  </div>

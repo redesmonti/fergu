@@ -79,7 +79,7 @@ Template Name: Cortinas Roller
 			<h2>Solicitud de Información</h2>
 			
 
-    	<form id="contact-form" name="contact-form" action="<?php bloginfo('url'); ?>/#contact-form" method="post">
+    	<form id="contact-form" name="contact-form" action="<?php bloginfo('url'); ?>/cortinas-roller/#contact-form" method="post">
 		              <?php //Comprobamos si el formulario ha sido enviado
 		              if (isset( $_POST['btn-submit'] )) {
 		                //Creamos una variable para almacenar los errores
@@ -100,16 +100,16 @@ Template Name: Cortinas Roller
 		                if ( empty( $f_name ) ) {
 		                  $reg_errors->add("empty-name", "El campo nombre es obligatorio");
 		                }
-		                //El campo Email es obligatorio, comprobamos que no esté vacío y en caso contrario creamos un registro de error
-		                if ( empty( $f_email ) ) {
-		                  $reg_errors->add("empty-email", "El campo e-mail es obligatorio");
+		                //El campo Email o Telefono es obligatorio, comprobamos que no esté vacío y en caso contrario creamos un registro de error
+		                if ( empty( $f_email ) and  empty( $telefono ) ) {
+		                  $reg_errors->add("empty-email-or-phone", "El campo e-mail o telefono es obligatorio");
 		                }
 		                //Comprobamos que el dato tenga formato de e-mail con la función de WordPress "is_email" y en caso contrario creamos un registro de error
-		                if ( !is_email( $f_email ) ) {
+		                /*if ( !is_email( $f_email ) ) {
 		                  $reg_errors->add( "invalid-email", "El e-mail no tiene un formato válido" );
-		                }
+		                }*/
 		                //El campo Teléfono es obligatorio, comprobamos que no esté vacío y en caso contrario creamos un registro de error
-		                if ( empty( $telefono ) ) {
+		                /*if ( empty( $telefono ) ) {
 		                  $reg_errors->add("empty-telefono", "El campo teléfono es obligatorio");
 		                }
 		                //El campo Dirección es obligatorio, comprobamos que no esté vacío y en caso contrario creamos un registro de error
@@ -123,15 +123,15 @@ Template Name: Cortinas Roller
 		                //El campo Ciudad es obligatorio, comprobamos que no esté vacío y en caso contrario creamos un registro de error
 		                if ( empty( $ciudad ) ) {
 		                  $reg_errors->add("empty-ciudad", "El campo ciudad es obligatorio");
-		                }
+		                }*/
 		                //El campo Mensaje es obligatorio, comprobamos que no esté vacío y en caso contrario creamos un registro de error
 		                if ( empty( $f_message ) ) {
 		                  $reg_errors->add("empty-message", "El campo mensaje es obligatorio");
 		                }
-		 
-		                if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])){
+		 				
+		 				if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])){
                           //your site secret key
-                          $secret = '6LdDUkQUAAAAAIqH2gwuP9XE3ov8rtwgbvlgi84-';
+                          $secret = '6Lce7kcUAAAAAD1juyAQUaLfD3Fkpj5AlK9I2ya4';
                           //get verify response data
                           $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
                           $responseData = json_decode($verifyResponse);
@@ -142,7 +142,7 @@ Template Name: Cortinas Roller
                                 $recipient = "carlosmellaneira@gmail.com";
                
                                 //Asunto del email
-                                $subject = 'Formulario de contacto para cortinas Roller ' . get_bloginfo( 'name' );
+                                $subject = 'Formulario de contacto para cortinas roller ' . get_bloginfo( 'name' );
                
                                 //La dirección de envio del email es la de nuestro blog por lo que agregando este header podremos responder al remitente original
                                 $headers = "Reply-to: " . $f_name . " <" . $f_email . ">\r\n";
@@ -213,48 +213,39 @@ Template Name: Cortinas Roller
 		              </div>
 		 
 		              <div class="form-group">
-		                <input type="email" id="f_email" name="f_email" class="form-control" value="<?php echo $f_email;?>" placeholder="E-mail" required aria-required="true">
+		                <input type="email" id="f_email" name="f_email" class="form-control" value="<?php echo $f_email;?>" placeholder="E-mail"  aria-required="true">
 		 
 		                <?php //Comprobamos si hay errores en la validación del campo E-mail
 		                if ( is_wp_error( $reg_errors ) ) {
-		                  if ($reg_errors->get_error_message("empty-email")) {?>
+		                  if ($reg_errors->get_error_message("empty-email-or-phone")) {?>
 		                  <br class="clearfix" />
 		                  <div class="alert alert-danger alert-dismissable">
 		                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-		                    <p><?php echo $reg_errors->get_error_message("empty-email");?></p>
+		                    <p><?php echo $reg_errors->get_error_message("empty-email-or-phone");?></p>
 		                  </div>
 		                  <?php }
 		                }
 		 
-		                //Comprobamos si hay errores en el formato del campo E-mail
-		                if ( is_wp_error( $reg_errors ) ) {
-		                  if ($reg_errors->get_error_message("invalid-email")) {?>
-		                  <br class="clearfix" />
-		                  <div class="alert alert-warning alert-dismissable">
-		                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-		                    <p><?php echo $reg_errors->get_error_message("invalid-email");?></p>
-		                  </div>
-		                  <?php }
-		                }?>
+		                ?>
 		              </div>
 
 		              <div class="form-group">
-		                <input type="text" id="telefono" name="telefono" class="form-control" value="<?php echo $telefono;?>" placeholder="Teléfono" required aria-required="true">
+		                <input type="text" id="telefono" name="telefono" class="form-control" value="<?php echo $telefono;?>" placeholder="Teléfono"  aria-required="true">
 		 
 		                <?php //Comprobamos si hay errores en la validación del campo Clinica
 		                if ( is_wp_error( $reg_errors ) ) {
-		                  if ($reg_errors->get_error_message("empty-telefono")) {?>
+		                  if ($reg_errors->get_error_message("empty-email-or-phone")) {?>
 		                  <br class="clearfix" />
 		                  <div class="alert alert-danger alert-dismissable">
 		                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-		                    <p><?php echo $reg_errors->get_error_message("empty-telefono");?></p>
+		                    <p><?php echo $reg_errors->get_error_message("empty-email-or-phone");?></p>
 		                  </div>
 		                  <?php }
 		                }?>
 		              </div>
 		 
 		              <div class="form-group">
-		                <input type="text" id="direccion" name="direccion" class="form-control" value="<?php echo $direccion;?>" placeholder="Dirección" required aria-required="true">
+		                <input type="text" id="direccion" name="direccion" class="form-control" value="<?php echo $direccion;?>" placeholder="Dirección" aria-required="true">
 		 
 		                <?php //Comprobamos si hay errores en la validación del campo Clinica
 		                if ( is_wp_error( $reg_errors ) ) {
@@ -269,7 +260,7 @@ Template Name: Cortinas Roller
 		              </div>
 
 		              <div class="form-group">
-		                <input type="text" id="comuna" name="comuna" class="form-control" value="<?php echo $comuna;?>" placeholder="Comuna" required aria-required="true">
+		                <input type="text" id="comuna" name="comuna" class="form-control" value="<?php echo $comuna;?>" placeholder="Comuna" aria-required="true">
 		 
 		                <?php //Comprobamos si hay errores en la validación del campo Clinica
 		                if ( is_wp_error( $reg_errors ) ) {
@@ -284,7 +275,7 @@ Template Name: Cortinas Roller
 		              </div>
 
 		              <div class="form-group">
-		                <input type="text" id="ciudad" name="ciudad" class="form-control" value="<?php echo $ciudad;?>" placeholder="Ciudad" required aria-required="true">
+		                <input type="text" id="ciudad" name="ciudad" class="form-control" value="<?php echo $ciudad;?>" placeholder="Ciudad" aria-required="true">
 		 
 		                <?php //Comprobamos si hay errores en la validación del campo Clinica
 		                if ( is_wp_error( $reg_errors ) ) {
@@ -312,10 +303,11 @@ Template Name: Cortinas Roller
 		                  <?php }
 		                }?>
 		              </div>
-		 			  <div class="g-recaptcha" data-sitekey="6LdDUkQUAAAAAIoj9XjYz9tOXiy0eO-8C5KR6KiM" style="transform:scale(0.85);-webkit-transform:scale(0.85);transform-origin:0 0;-webkit-transform-origin:0 0;"></div>
+		 			  <div class="g-recaptcha" data-sitekey="6Lce7kcUAAAAAEwxCkADRL3ecfxKX2Gdjkb9u6f6" style="transform:scale(0.85);-webkit-transform:scale(0.85);transform-origin:0 0;-webkit-transform-origin:0 0;"></div>
 		              <button type="submit" id="btn-submit" name="btn-submit" class="btn btn-default">Enviar</button>
 		</form>
 	</div>
+
 </div>
 
 <?php get_footer(); ?>

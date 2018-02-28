@@ -113,10 +113,11 @@
 	<section id="productos" class="smooth-scroll">
 		<?php include_once( 'productos.php' ); ?>	
 	</section>
+	
 	<section class="texto-comercial">
 		<div class="container">
 		<div class="cuadro-blanco wow fadeInUp">
-			<h2><span>"</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia repellat impedit at magni saepe, tempora pariatur optio <span>"</span></h2>
+			<h4><span>"</span>Somos fabricantes con más de 30 años en el mercado y controlamos todo el proceso de producción de cortinas hasta su instalación. Ofrecemos a usted cortinas de madera nativa tratadas. Cortinas para ser usadas, ya sea en el exterior como interior de su hogar, permitiendo aislar el sol, las bajas temperaturas, el ruido, así como también mejorar su calidad de vida. Nuestro compromiso, su satisfacción.<span>"</span></h4>
 		</div>	
 		</div>
 	</section>

@@ -3,7 +3,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<h1 class="wow zoomIn">Nuestros <span>Servicios</span></h1>
-				<p class="wow zoomIn">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa mollitia a neque labore</p>
+				<p class="wow zoomIn">Realizamos servicios de mantención de cortinas y recambio de malla</p>
 			</div>
 		</div>
 		<div class="col-md-5">
@@ -31,7 +31,7 @@
 		<div class="row">
 			<div class="col-md-12">
 			<h1 class="wow zoomIn">Nuestros <span>Servicios</span></h1>
-			<p class="wow zoomIn">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa mollitia a neque labore</p>
+			<p class="wow zoomIn">Realizamos servicios de mantención de cortinas y recambio de malla</p>
 			</div>
 		</div>
 		

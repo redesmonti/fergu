@@ -9,7 +9,7 @@ Template Name: Cortinas Roller
 <div class="container">
 	<div class="contenedor-entradas">
 	<div class="titulo-interior"><h2>Cortinas roller</h2></div>
-		<div id="custom_carousel" class="carousel slide" data-ride="carousel" data-interval="4000">
+		<div id="custom_carousel" class="carousel slide" data-ride="carousel" data-interval="15000">
             <!-- Wrapper for slides -->
             <?php 
 		        
@@ -131,7 +131,7 @@ Template Name: Cortinas Roller
 		 				
 		 				if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])){
                           //your site secret key
-                          $secret = '6Lce7kcUAAAAAD1juyAQUaLfD3Fkpj5AlK9I2ya4';
+                          $secret = '6LenJEkUAAAAANJogFl3Hn_PH5JAGWbn5l5dAu5m';
                           //get verify response data
                           $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
                           $responseData = json_decode($verifyResponse);
@@ -303,7 +303,7 @@ Template Name: Cortinas Roller
 		                  <?php }
 		                }?>
 		              </div>
-		 			  <div class="g-recaptcha" data-sitekey="6Lce7kcUAAAAAEwxCkADRL3ecfxKX2Gdjkb9u6f6" style="transform:scale(0.85);-webkit-transform:scale(0.85);transform-origin:0 0;-webkit-transform-origin:0 0;"></div>
+		 			  <div class="g-recaptcha" data-sitekey="6LenJEkUAAAAAH0-9B38wJV8lxof3u9UK2bw2Re3" style="transform:scale(0.85);-webkit-transform:scale(0.85);transform-origin:0 0;-webkit-transform-origin:0 0;"></div>
 		              <button type="submit" id="btn-submit" name="btn-submit" class="btn btn-default">Enviar</button>
 		</form>
 	</div>

@@ -4,7 +4,7 @@
 		<div class="row">
 			<div class="col-md-12">
 			<h1 class="wow zoomIn">Nuestros <span>Productos</span></h1>
-			<p class="wow zoomIn">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa mollitia a neque labore</p>
+			<p class="wow zoomIn">Con más de 30 años en el mercado Fabricando cortinas de madera, ofrecemos a usted cortinas de madera nativa tratadas. Cortinas para ser usadas, ya sea en el exterior como interior de su hogar, permitiendo aislar el sol, las bajas temperaturas, el ruido, así como también mejorar la calidad de su vida.</p>
 		</div>
 		</div>
 		

@@ -276,16 +276,19 @@ section.carrusel-chico {
 /*sección comercial */
 
 .texto-comercial {
-    background-image: url(http://testmonti.cortinasfergu.cl/wp-content/uploads/2018/02/fondo.png);
-    background-size: 100%;
-    background-attachment: fixed;
-    height: 300px;
-    margin-top: 2%;
-    padding-top: 8%;
+background-image: url(http://testmonti.cortinasfergu.cl/wp-content/uploads/2018/02/fondo.png);
+background-size: 100%;
+background-attachment: fixed;
+height: 300px;
+margin-top: 2%;
+padding-top: 3%;
+}
+.cuadro-blanco h4 {
+line-height: 26px;
 }
 .cuadro-blanco {
     background: #ffffffc7;
-    width: 77%;
+    width: 100%;
     margin: auto;
     text-align: center;
     padding: 6px;
@@ -645,3 +648,28 @@ height:auto
 
 
 
+a.right.carousel-control, a.left.carousel-control{
+    background-image: none;
+}
+span.glyphicon.glyphicon-chevron-right, span.glyphicon.glyphicon-chevron-left {
+    color: #ea4529;
+}
+.content {
+    height: 180px;
+}
+.contenedor-entradas h2 {
+    color: #ea4529;
+}
+.formulario {
+    margin-bottom: 5%;
+}
+
+.titulo-interior h2 {
+    color: #fff;
+}
+ .titulo-interior {
+    text-align: center;
+    background: #ea4529;
+    width: 70%;
+    margin: auto;
+}
